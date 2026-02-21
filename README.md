@@ -145,3 +145,20 @@ Close & save file
 source /etc/profile.d/jdk.sh
 ```
 
+# Install JDK 25
+
+```
+wget https://download.oracle.com/java/25/archive/jdk-25.0.1_linux-x64_bin.tar.gz
+tar -xvf jdk-25.0.1_linux-x64_bin.tar.gz
+mv jdk-25.0.1/ /opt/
+sudo nano /etc/profile.d/jdk.sh
+```
+
+Add lines:
+```
+export JAVA_HOME=/opt/jdk-25.0.1
+export PATH=$JAVA_HOME/bin:$PATH
+```
+```
+source /etc/profile.d/jdk.sh
+```
